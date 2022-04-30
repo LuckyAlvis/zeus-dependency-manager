@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>zeus-dependencies-third</artifactId>
-        <groupId>com.dai.zeus</groupId>
+        <groupId>com.dai.shenzhen</groupId>
         <version>1.0.2</version>
         <relativePath>../zeus-dependencies-third/pom.xml</relativePath>
     </parent>
