@@ -5,6 +5,12 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.9.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
     <groupId>com.dai.shenzhen</groupId>
     <artifactId>zeus-dependencies-third</artifactId>
     <version>1.0.2</version>
@@ -23,16 +29,19 @@
         <maven.compiler.target>8</maven.compiler.target>
         <java.version>1.8</java.version>
         <fastjson.version>1.2.68</fastjson.version>
-        <spring-boot.version>2.6.3</spring-boot.version>
-        <swagger.fox.version>2.9.2</swagger.fox.version>
+        <spring-boot.version>2.3.9.RELEASE</spring-boot.version>
+        <spring-cloud.version>Hoxton.SR10</spring-cloud.version>
         <lombok.version>1.18.24</lombok.version>
         <mybatisplus.version>3.5.1</mybatisplus.version>
         <mysql-connector-java.version>8.0.19</mysql-connector-java.version>
         <mybatis-spring-boot.version>2.2.2</mybatis-spring-boot.version>
         <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
-
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
         <druid-spring-boot-starter.version>1.2.9</druid-spring-boot-starter.version>
+        <commons-io.version>2.11.0</commons-io.version>
+        <guava.version>31.1-jre</guava.version>
     </properties>
 
     <dependencies>
@@ -75,25 +84,26 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring-boot.version}</version>
-            <exclusions>
-                <!--排除tomcat依赖-->
-                <exclusion>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                    <groupId>org.springframework.boot</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
-        <!--swagger 最新依赖内置版本-->
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${swagger.fox.version}</version>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
         </dependency>
-
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${swagger.fox.version}</version>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${commons-collections4.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
         </dependency>
     </dependencies>
     <build>
